@@ -1,17 +1,24 @@
 import React from 'react';
 
 import { Navbar, Footer } from '../components/index';
+
+import background from '../assets/background.webp';
+
 const Home = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <div className='min-h-full'>
-        <div className='my-12'>
-          <p>Content</p>
-        </div>
+      <div className='h-2/4'>
+        <img
+          src={background}
+          alt='Rick and Morty'
+          className='w-screen'
+          width='100%'
+          height='100%'
+        />
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

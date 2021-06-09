@@ -1,40 +1,35 @@
 const Footer = () => {
   return (
-    <div className='pt-12'>
-      <footer id='footer' className='relative dark:bg-gray-900 pt-24'>
-        <div className='border-t border-b border-gray-200 dark:border-gray-700 py-16'>
-          <div className='mx-auto container px-4 xl:px-12 2xl:px-4'>
+    <>
+      <footer id='footer' className='relative dark:bg-gray-900'>
+        <div className='border-t border-gray-200 dark:border-gray-700 py-16'>
+          <div className='max-w-7xl mx-auto container px-4 xl:px-12 2xl:px-4'>
             <div className='lg:flex'>
               <div className='w-full lg:w-1/2 mb-16 lg:mb-0 flex'>
                 <div className='w-full lg:w-1/2 px-6'>
                   <ul>
                     <li>
                       <a
-                        href='/'
+                        rel='external noreferrer noopener nofollow'
+                        href='https://rickandmortyapi.com'
                         className='text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50'
                       >
-                        Rick
+                        API
                       </a>
                     </li>
                     <li className='mt-6'>
                       <a
-                        href='/'
+                        rel='external noreferrer noopener nofollow'
+                        href='https://github.com/lucianmurmurache/rick-and-morty'
                         className='text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50'
                       >
-                        Morty
+                        Github repository
                       </a>
                     </li>
                     <li className='mt-6'>
                       <a
-                        href='/'
-                        className='text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50'
-                      >
-                        FAQ
-                      </a>
-                    </li>
-                    <li className='mt-6'>
-                      <a
-                        href='/'
+                        rel='external noreferrer noopener nofollow'
+                        href='https://rickandmortyapi.com/documentation'
                         className='text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50'
                       >
                         Documentation
@@ -76,7 +71,7 @@ const Footer = () => {
                   <ul>
                     <li>
                       <a
-                        href='/'
+                        href='/privacy-policy'
                         className='text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50'
                       >
                         Privacy policy
@@ -84,7 +79,7 @@ const Footer = () => {
                     </li>
                     <li className='mt-6'>
                       <a
-                        href='/'
+                        href='/terms-of-service'
                         className='text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50'
                       >
                         Terms of service
@@ -98,17 +93,17 @@ const Footer = () => {
                       href='https://github.com/lucianmurmurache'
                       rel='external noopener noreferrer'
                       target='_blank'
+                      aria-label='Visit Github profile'
                     >
-                      <div className='text-gray-800 dark:text-gray-50 cursor-pointer hover:text-brand dark:hover:text-brand '>
+                      <div className='text-gray-800 dark:text-gray-50 cursor-pointer hover:text-brand dark:hover:text-brand'>
                         <svg
-                          className='footer-icon feather feather-github'
                           xmlns='http://www.w3.org/2000/svg'
-                          width='24'
-                          height='24'
+                          width='32'
+                          height='32'
                           viewBox='0 0 24 24'
                           fill='none'
                           stroke='currentColor'
-                          strokeWidth='1.5'
+                          strokeWidth='1'
                           strokeLinecap='round'
                           strokeLinejoin='round'
                         >
@@ -116,25 +111,28 @@ const Footer = () => {
                         </svg>
                       </div>
                     </a>
+                  </div>
+                  <div className='flex items-center mb-6'>
                     <a
-                      href='https://twitter.com/LMurmurache'
+                      href='https://murmurache.com'
                       rel='external noopener noreferrer'
                       target='_blank'
+                      aria-label='Visit portfolio site'
                     >
-                      <div className='pl-4'>
+                      <div className='text-gray-800 dark:text-gray-50 cursor-pointer hover:text-brand dark:hover:text-brand'>
                         <svg
-                          className='footer-icon feather feather-twitter text-gray-800 dark:text-gray-50 cursor-pointer hover:text-brand dark:hover:text-brand '
                           xmlns='http://www.w3.org/2000/svg'
-                          width={24}
-                          height={24}
+                          width='32'
+                          height='32'
                           viewBox='0 0 24 24'
                           fill='none'
                           stroke='currentColor'
-                          strokeWidth='1.5'
+                          strokeWidth='1'
                           strokeLinecap='round'
                           strokeLinejoin='round'
                         >
-                          <path d='M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z' />
+                          <path d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'></path>
+                          <circle cx='12' cy='7' r='4'></circle>
                         </svg>
                       </div>
                     </a>
@@ -145,7 +143,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   );
 };
 export default Footer;
