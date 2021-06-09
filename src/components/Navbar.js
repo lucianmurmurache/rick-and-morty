@@ -6,32 +6,40 @@ import logo from '../assets/logo.png';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
+    <>
       <nav className='dark:bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-200 dark:border-gray-700'>
           <div className='flex items-center justify-between h-24'>
             <div className='flex items-center'>
               <div className='flex-shrink-0'>
-                <img className='h-24 w-32' src={logo} alt='Workflow' />
+                <a href='/'>
+                  <img
+                    className='h-24 w-32'
+                    src={logo}
+                    alt='Workflow'
+                    width='32'
+                    height='24'
+                  />
+                </a>
               </div>
               <div className='hidden md:block'>
-                <div className='ml-10 flex items-baseline space-x-4'>
+                <div className='ml-10 flex items-baseline space-x-10'>
                   <a
-                    href='/'
+                    href='/characters'
                     className='text-xs px-3 lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50'
                   >
                     Characters
                   </a>
 
                   <a
-                    href='/'
+                    href='/locations'
                     className='text-xs px-3 lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50'
                   >
                     Locations
                   </a>
 
                   <a
-                    href='/'
+                    href='/episodes'
                     className='text-xs px-3 lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50'
                   >
                     Episodes
@@ -137,7 +145,7 @@ const Navbar = () => {
           )}
         </Transition>
       </nav>
-    </div>
+    </>
   );
 };
 
