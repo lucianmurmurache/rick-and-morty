@@ -15,6 +15,9 @@ const request = async (url) => {
   }
 };
 
-export const getCharacters = () => request('character');
-export const getLocations = () => request('location');
-export const getEpisodes = () => request('episode');
+export const getCharacters = (pageNumber) =>
+  request(`character/?page=${pageNumber}`);
+export const getLocations = (pageNumber) =>
+  request(`location?page=${pageNumber}`);
+export const getEpisodes = (pageNumber) =>
+  request(`episode?page=${pageNumber}`);

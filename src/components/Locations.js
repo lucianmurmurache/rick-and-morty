@@ -1,12 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { getLocations } from '../api/api';
 
+import { Paginate } from './index';
+
 const Locations = () => {
   const [locations, setLocations] = useState([]);
+  const [pageNumber, setPageNumber] = useState(1);
 
+  const handlePrevious = () => {
+    pageNumber <= 1 ? setPageNumber(1) : setPageNumber(pageNumber - 1);
+  };
+
+  const handleNext = () => {
+    pageNumber >= 6 ? setPageNumber(6) : setPageNumber(pageNumber + 1);
+  };
   useEffect(() => {
-    getLocations().then((resolve) => setLocations(resolve.results));
-  }, []);
+    getLocations(pageNumber).then((resolve) => setLocations(resolve.results));
+    window.scrollTo(0, 0);
+  }, [pageNumber]);
 
   return (
     <div className='flex flex-col dark:bg-gray-900'>
@@ -46,6 +57,7 @@ const Locations = () => {
               </tbody>
             </table>
           </div>
+          <Paginate handleNext={handleNext} handlePrevious={handlePrevious} />
         </div>
       </div>
     </div>

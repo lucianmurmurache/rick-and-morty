@@ -1,12 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { getEpisodes } from '../api/api';
 
+import { Paginate } from './index';
+
 const Episodes = () => {
   const [episodes, setEpisodes] = useState([]);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  const handlePrevious = () => {
+    pageNumber <= 1 ? setPageNumber(1) : setPageNumber(pageNumber - 1);
+  };
+
+  const handleNext = () => {
+    pageNumber >= 3 ? setPageNumber(3) : setPageNumber(pageNumber + 1);
+  };
 
   useEffect(() => {
-    getEpisodes().then((resolve) => setEpisodes(resolve.results));
-  }, []);
+    getEpisodes(pageNumber).then((resolve) => setEpisodes(resolve.results));
+  }, [pageNumber]);
   return (
     <div className='flex flex-col dark:bg-gray-900'>
       <div className='-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8'>
@@ -44,6 +55,7 @@ const Episodes = () => {
                 ))}
               </tbody>
             </table>
+            <Paginate handleNext={handleNext} handlePrevious={handlePrevious} />
           </div>
         </div>
       </div>
