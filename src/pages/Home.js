@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Navbar, Footer } from '../components/index';
 
-import background from '../assets/background.webp';
+import background from '../assets/rick&morty.gif';
 
 const Home = () => {
   return (

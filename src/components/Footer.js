@@ -5,7 +5,7 @@ const Footer = () => {
         <div className='border-t border-gray-200 dark:border-gray-700 py-16'>
           <div className='max-w-4xl mx-auto container px-4 xl:px-12 2xl:px-4'>
             <div className='w-full mb-16 lg:mb-0 flex'>
-              <div className='w-full px-6'>
+              <div className='w-full px-2 lg:px-6 flex-auto'>
                 <ul>
                   <li>
                     <a
@@ -24,7 +24,7 @@ const Footer = () => {
                       href='https://github.com/lucianmurmurache/rick-and-morty'
                       className='text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50'
                     >
-                      Github repository
+                      Github
                     </a>
                   </li>
                   <li className='mt-6'>
@@ -39,7 +39,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className='w-full px-6'>
+              <div className='w-full px-2 lg:px-6 flex-auto'>
                 <ul>
                   <li>
                     <a
@@ -67,7 +67,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className='w-full px-6'>
+              <div className='w-full px-2 lg:px-6 flex-auto'>
                 <ul>
                   <li>
                     <a
