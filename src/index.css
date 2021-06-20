@@ -58,4 +58,7 @@ body::-webkit-scrollbar-track {
   .clip-full-circle {
     clip-path: circle();
   }
+  .will-change-transform {
+    will-change: transform;
+  }
 }

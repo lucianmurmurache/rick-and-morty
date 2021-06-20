@@ -21,3 +21,5 @@ export const getLocations = (pageNumber) =>
   request(`location?page=${pageNumber}`);
 export const getEpisodes = (pageNumber) =>
   request(`episode?page=${pageNumber}`);
+export const searchCharacter = (charName) =>
+  request(`character/?name${charName}`);
