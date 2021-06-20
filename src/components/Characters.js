@@ -35,7 +35,7 @@ const Characters = () => {
             <img
               src={char.image}
               alt={char.name}
-              className='shadow-lg w-full my-2 rounded-2xl transition-all duration-500 transform translate-y-0 hover:shadow-2xl hover:-translate-y-1'
+              className='shadow-lg w-full my-2 rounded-2xl will-change-transform transition-all duration-500 transform translate-y-0 hover:shadow-2xl hover:-translate-y-1'
             />
             <p className='text-xl sm:text-lx text-gray-900 dark:text-white'>
               {char.name}
