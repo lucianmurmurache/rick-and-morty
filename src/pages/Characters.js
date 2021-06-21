@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 
 import { Navbar, Footer } from '../components';
 
@@ -8,13 +8,13 @@ const CharactersComponent = React.lazy(() =>
 
 const Characters = () => {
   return (
-    <>
+    <div>
       <Navbar />
-      <Suspense fallback={<div>Loading...</div>}>
+      <React.Suspense fallback={<div>Loading...</div>}>
         <CharactersComponent />
-      </Suspense>
+      </React.Suspense>
       <Footer />
-    </>
+    </div>
   );
 };
 

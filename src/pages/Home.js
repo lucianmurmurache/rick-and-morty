@@ -6,7 +6,7 @@ import background from '../assets/rick&morty.gif';
 
 const Home = () => {
   return (
-    <>
+    <div>
       <Navbar />
       <div className='h-2/4'>
         <img
@@ -18,7 +18,7 @@ const Home = () => {
         />
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

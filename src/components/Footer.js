@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <>
+    <div>
       <footer id='footer' className='relative dark:bg-gray-900'>
         <div className='border-t border-gray-200 dark:border-gray-700 py-16'>
           <div className='max-w-4xl mx-auto container px-4 xl:px-12 2xl:px-4'>
@@ -91,7 +91,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 export default Footer;
