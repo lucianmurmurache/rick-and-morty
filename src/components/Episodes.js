@@ -17,6 +17,8 @@ const Episodes = () => {
 
   useEffect(() => {
     getEpisodes(pageNumber).then((resolve) => setEpisodes(resolve.results));
+    document.title = 'Episodes';
+    window.scrollTo(0, 0);
   }, [pageNumber]);
   return (
     <div className='flex flex-col dark:bg-gray-900'>

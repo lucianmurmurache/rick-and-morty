@@ -1,18 +1,14 @@
 import React from 'react';
 
-import { Navbar, Footer } from '../components';
-
 const EpisodesComponent = React.lazy(() => import('../components/Episodes.js'));
 
 const Episodes = () => {
   return (
-    <div>
-      <Navbar />
-      <React.Suspense fallback={<div>Loading...</div>}>
+    <>
+      <React.Suspense fallback={<p>Loading...</p>}>
         <EpisodesComponent />
       </React.Suspense>
-      <Footer />
-    </div>
+    </>
   );
 };
 

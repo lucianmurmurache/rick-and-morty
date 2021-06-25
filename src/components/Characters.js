@@ -20,6 +20,7 @@ const Characters = () => {
 
   useEffect(() => {
     getCharacters(pageNumber).then((resolve) => setCharcters(resolve.results));
+    document.title = 'Characters';
     window.scrollTo(0, 0);
   }, [pageNumber]);
 
@@ -42,11 +43,20 @@ const Characters = () => {
             </p>
             <p className='text-md sm:text-lx text-gray-900 dark:text-white'>
               {char.status === 'Alive' ? (
-                <BiHappy className='h-5 w-5 fill-current text-green-600 inline-block' />
+                <BiHappy
+                  aria-label='Status: Alive'
+                  className='h-5 w-5 fill-current text-green-600 inline-block'
+                />
               ) : char.status === 'unknown' ? (
-                <BiMeh className='h-5 w-5 fill-current text-yellow-600 inline-block' />
+                <BiMeh
+                  aria-label='Status: Unknown'
+                  className='h-5 w-5 fill-current text-yellow-600 inline-block'
+                />
               ) : (
-                <BiSad className='h-5 w-5 fill-current text-red-600 inline-block' />
+                <BiSad
+                  aria-label='Status: Dead'
+                  className='h-5 w-5 fill-current text-red-600 inline-block'
+                />
               )}{' '}
               {Capitalize(char.status)} - {char.type || char.species}
             </p>
