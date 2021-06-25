@@ -16,6 +16,7 @@ const Locations = () => {
   };
   useEffect(() => {
     getLocations(pageNumber).then((resolve) => setLocations(resolve.results));
+    document.title = 'Locations';
     window.scrollTo(0, 0);
   }, [pageNumber]);
 

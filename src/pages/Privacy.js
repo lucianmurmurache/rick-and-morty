@@ -1,11 +1,8 @@
 import React from 'react';
 
-import { Navbar, Footer } from '../components/index';
-
 const Privacy = () => {
   return (
     <div className='dark:bg-gray-900'>
-      <Navbar />
       <div className='max-w-3xl mx-auto text-gray-900 dark:text-white mb-10'>
         <h1 className='text-4xl my-5 text-center'>Privacy Policy</h1>
         <p>Last updated: June 09, 2021</p>
@@ -507,7 +504,6 @@ const Privacy = () => {
           </li>
         </ul>
       </div>
-      <Footer />
     </div>
   );
 };
